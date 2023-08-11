@@ -9,7 +9,7 @@ manifest:
   projects:
     - name: zmk
       remote: frap129
-      revision: main
+      revision: sofle
       import: app/west.yml
   self:
     path: config
