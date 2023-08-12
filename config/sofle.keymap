@@ -26,6 +26,16 @@
         };
     };
 
+
+    behaviors {
+        layers: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cels = <0>;
+            bindings = <&mo LOWER>, <&mo RAISE>, <&mo ADJUST>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -39,9 +49,9 @@
             bindings = <
         &kp ESC  &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                             &kp N6 &kp N7  &kp N8    &kp N9   &kp N0   &kp DEL
         &kp CAPS &kp Q  &kp W    &kp E    &kp R     &kp T                              &kp Y  &kp U   &kp I     &kp O    &kp P    &kp PIPE
-        &kp ALT  &kp A  &kp S    &kp D    &kp F     &kp G                              &kp H  &kp J   &kp K     &kp L    &kp SEMI &kp SQT
+        &kp LALT &kp A  &kp S    &kp D    &kp F     &kp G                             &kp H  &kp J   &kp K     &kp L    &kp SEMI &kp SQT
 &mt LCTRL GRAVE  &kp Z  &kp X    &kp C    &kp V     &kp B  &kp C_MUTE            &none &kp N  &kp M   &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                 &kp LGUI &kp LALT &kp LCTRL &kp SPACE  &kp BSPC &mt LSHIFT TAB &kp RET &kp RCTRL &kp RALT &kp RGUI
+                      &kp LEFT &kp RIGHT &kp LGUI &kp SPACE  &kp BSPC            &mt LSHIFT TAB &kp RET &layers &kp LBKT &kp RBKT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
