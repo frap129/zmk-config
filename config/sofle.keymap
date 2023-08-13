@@ -34,7 +34,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BACKSPACE_GUI";
             #binding-cells = <0>;
-            bindings = <&mt LGUI BKSPC>, <&kp BKSPC>;
+            bindings = <&mt LGUI BSPC>, <&kp BSPC>;
         };
 
     };
