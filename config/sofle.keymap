@@ -45,7 +45,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_TAB_CONTROL";
             #binding-cells = <0>;
-            bindings = <&mt RSHFT TAB>, <&kp RCTRL>;
+            bindings = <&gqt RSHFT TAB>, <&kp RCTRL>;
         };
     };
 
