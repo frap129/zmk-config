@@ -34,6 +34,13 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+        ccs: ctrl-ctrl-shift {
+            compatible = "zmk,behavior-tap-dance"
+            label = "CTRL_CTRL_SHIFT";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&kp LS(LCTRL)>;
+
+        };
         stc: shift_tab_control {
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_TAB_CONTROL";
@@ -57,7 +64,7 @@
         &kp ESC   &kp Q  &kp W  &kp E  &kp R  &kp T                          &kp Y     &kp U  &kp I     &kp O    &kp P    &kp BSLH
         &kp LALT  &kp A  &kp S  &kp D  &kp F  &kp G                          &kp H     &kp J  &kp K     &kp L    &kp SEMI &kp SQT
         &kp GRAVE &kp Z  &kp X  &kp C  &kp V  &kp B &kp C_MUTE      &kp K_PP &kp N     &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-           &kp LGUI &kp LS(LGUI) &kp LCTRL &kp SPACE &gqt LGUI BSPC &stc    &kp RET &lrs &kp LBKT  &kp RBKT
+               &kp LGUI &kp LS(LGUI) &ccs &kp SPACE &gqt LGUI BSPC  &stc     &kp RET &lrs &kp LBKT  &kp RBKT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
